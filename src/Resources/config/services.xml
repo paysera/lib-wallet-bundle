@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="paysera_wallet_api" class="Paysera_WalletApi">
+            <argument>%paysera_wallet.client_id%</argument>
+            <argument/><!-- secret -->
+            <argument>null</argument>
+            <argument type="service">
+                <service class="Paysera_WalletApi_Container">
+                    <call method="setStatePersister">
+                        <argument type="service">
+                            <service class="Paysera\Bundle\WalletBundle\State\StatePersister">
+                                <argument type="service" id="session"/>
+                                <argument>Paysera_WalletApi_%paysera_wallet.client_id%</argument>
+                            </service>
+                        </argument>
+                    </call>
+                </service>
+            </argument>
+        </service>
+    </services>
+</container>

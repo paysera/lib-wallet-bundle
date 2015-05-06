@@ -1,0 +1,16 @@
+{
+    "name": "paysera/lib-wallet-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 bundle for integration with Paysera Wallet API",
+    "keywords": ["Paysera", "wallet", "payments", "wallet api"],
+    "homepage": "https://developers.paysera.com/en/wallet/",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "^2.3.0",
+        "evp/paysera-wallet-php-client": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": { "Paysera\\Bundle\\WalletBundle\\": "src" }
+    }
+}

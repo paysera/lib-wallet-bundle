@@ -1,0 +1,11 @@
+# Managed by Composer
+/bin/*
+/vendor/
+
+# PHPUnit
+/phpunit.xml
+
+# Build data
+/build/
+
+/composer.lock
