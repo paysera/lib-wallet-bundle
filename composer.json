@@ -7,7 +7,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "^2.3.0",
+        "symfony/symfony": "^2.3|^3.0",
         "evp/paysera-wallet-php-client": "^1.0.0"
     },
     "autoload": {
